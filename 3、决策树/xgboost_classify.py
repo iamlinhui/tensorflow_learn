@@ -1,3 +1,5 @@
+import operator
+
 import numpy as np
 import pandas as pd
 import xgboost as xgb
@@ -24,5 +26,14 @@ if __name__ == "__main__":
 
     bst = xgb.train(param, data_train, num_boost_round=6, evals=watch_list)
     y_hat = bst.predict(data_test)
+
+    print(y_hat)
+    print(y_test.reshape(1, -1))
     result = y_test.reshape(1, -1) == y_hat
     print('正确率:\t', float(np.sum(result)) / len(y_hat))
+
+    importance = bst.get_fscore()
+    feature_num = 10  # 想要查看top10的特征名称及权重，这里设置想要查看前多少个特征及其权重
+    importance = sorted(importance.items(), key=operator.itemgetter(1), reverse=True)
+    importance = importance[:feature_num]
+    print(importance)
