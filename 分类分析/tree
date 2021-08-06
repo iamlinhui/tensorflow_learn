@@ -1,0 +1,41 @@
+digraph {
+    graph [ rankdir=TB ]
+    node [fontname="FangSong" shape=plaintext]
+    0 [ label="资方本金<966.785034" ]
+    0 -> 1 [label="yes, missing" color="#0000FF"]
+    0 -> 2 [label="no" color="#FF0000"]
+
+    1 [ label="借款期数<21" ]
+    1 -> 3 [label="yes, missing" color="#0000FF"]
+    1 -> 4 [label="no" color="#FF0000"]
+
+    3 [ label="我方利息<1.64499998" ]
+    3 -> 5 [label="yes, missing" color="#0000FF"]
+    3 -> 6 [label="no" color="#FF0000"]
+
+    5 [ label="leaf=-0.0169558004" shape="plaintext" ]
+
+    6 [ label="leaf=-0.053242024" shape="plaintext" ]
+
+    4 [ label="资方本金<178.790009" ]
+    4 -> 7 [label="yes, missing" color="#0000FF"]
+    4 -> 8 [label="no" color="#FF0000"]
+
+    7 [ label="间隔天数<28.5" ]
+    7 -> 9 [label="yes, missing" color="#0000FF"]
+    7 -> 10 [label="no" color="#FF0000"]
+
+    9 [ label="我方利息<2.84500003" ]
+    9 -> 11 [label="yes, missing" color="#0000FF"]
+    9 -> 12 [label="no" color="#FF0000"]
+
+    11 [ label="leaf=-0.00401799334" shape="plaintext" ]
+
+    12 [ label="leaf=-0.0360300504" shape="plaintext" ]
+
+    10 [ label="leaf=-0.0458521806" shape="plaintext" ]
+
+    8 [ label="leaf=-0.00235206611" shape="plaintext" ]
+
+    2 [ label="leaf=-0.00761701027" shape="plaintext" ]
+}

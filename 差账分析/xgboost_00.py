@@ -21,4 +21,5 @@ if __name__ == "__main__":
     print(y_hat)
 
     importance = bst.get_fscore()
-    print(importance)
+    for i in importance:
+        print(i)
